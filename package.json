@@ -1,0 +1,7 @@
+﻿{
+  "name": "programm1",
+  "version": "1.0.0",
+  "dependencies": {
+    "readline-sync": "latest"
+  }
+}
