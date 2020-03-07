@@ -21,7 +21,8 @@ function generateRandomNumber() {
 }
 
 function getNumber() {
-    return readlineSync.question('\nEnter your number: \n');
+    console.log('\nВведите ваше число:');
+    return readlineSync.question('-->  ');
 }
 
 function compareNumbers(number1, number2) {
@@ -41,13 +42,13 @@ function play() {
     let number1 = generateRandomNumber();
     
     if (sizeNumber === 3) {
-        console.log('You need to guess a three-digit number.')
+        console.log('Вам нужно угадать трехзначное число.')
     } else if (sizeNumber === 4) {
-        console.log('You need to guess the four-digit number.')
+        console.log('Вам нужно угадать четырехзначное число.')
     } else if (sizeNumber === 5) {
-        console.log('You need to guess the five-digit number.')
+        console.log('Вам нужно угадать пятизначное число.')
     } else {
-        console.log('You need to guess the six-digit number.')
+        console.log('Вам нужно угадать шестизначное число.')
     }
     
     
@@ -55,12 +56,12 @@ function play() {
         let number2 = getNumber();
 
         if (number1 === number2) {
-            console.log('You win!');
+            console.log('Вы выиграли!');
             break;
         }
         
         compareNumbers(number1, number2);
-        console.log('\nThe number of matched digits is out of places - ' + cows + '\nThe number of matched digits in their places - ' + bulls + '\n');
+        console.log('\nКоличество совпавших цифр не на своих местах - ' + cows + '\nКоличество совпавших цифр на своих местах - ' + bulls + '\n');
     }
 }
 
